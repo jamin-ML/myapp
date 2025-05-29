@@ -1,0 +1,195 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumajamin's portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.css">
+    <link rel="stylesheet" href="{% static 'myapp/home.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'myapp/me.png' %}" alt="">
+        </div>
+        <ul class="linkscontainer">
+            <li><a href="#">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+        <div class="icons">
+            <a href="#"><i class="bx bx-search"></i></a>
+            <a href="#"><i class="bx bx-user"></i></a>
+            <div class="bx bx-menu" id="menu-icon"><i></i></div>
+        </div>
+        
+    </header>
+    <section class="main-body">
+        <div class="main-text">
+            <h4>juma jamin</h4>
+            <p>we welcom you to our outstaning products</p>
+            <h2>i'm juma jamin <br>a web developer
+            <br> a machine learning Enthusiast</h2>
+            <a href="#" class="main-btn">project</a>
+        </div>
+        <div class="social-icon">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+
+    </section>
+
+    <section class="animation">
+        <div class="scrolly-container">
+            <div class="scrolly-content">
+                <span>💻 Python Projects</span>
+                <span>🛠 Git & GitHub</span>
+                <span>🌐 Html & Css</span>
+                <span>📊 Data Analysis</span>
+                <span>🧠 Machine Learning</span>
+            </div>
+        </div>
+    </section>
+    <section class="bio-section">
+        <div class="bio-container">
+            
+            <div class="bio-image">
+                <img src="{% static 'myapp/ChatGPT Image May 29, 2025, 07_54_18 AM.png' %}" alt="juma jamin">
+            </div>
+            <div class="bio-text">
+                <h2>About Me</h2>
+                <p>HI i'm <strong>Juma Jamin</strong>
+                    — a passionate Web Developer and Machine Learning Enthusiast. I love crafting beautiful websites and intelligent systems that solve real-world problems. Whether it's clean code or powerful models, I bring creativity and logic to the table.
+                </p>
+                <a href="#contact" class="bio-btn">Let's Talk</a>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="skills-section">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+        <div class="skill-category">
+        <h3>Frontend</h3>
+        <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Tailwind</span>
+        </div>
+        </div>
+
+        <div class="skill-category">
+        <h3>Backend</h3>
+        <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Node.js</span>
+        </div>
+        </div>
+
+        <div class="skill-category">
+        <h3>Machine Learning</h3>
+        <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Matlab</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Seaborn</span>
+            <span class="tag">ML Algorthims</span>
+        </div>
+        </div>
+                <div class="skill-category">
+        <h3>Tools & Others</h3>
+        <div class="tags">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Jupyter Notebook</span>
+        </div>
+        </div>
+    </div>
+    </section>
+    <!-- Project Section HTML -->
+    <section id="projects" class="projects-section">
+    <h2 class="section-title">My Projects</h2>
+    <div class="projects-grid">
+        {% for project in projectlist %}
+        <div class="project-card">
+        <img src="{{project.image.url }}" alt="Project Screenshot" class="project-image" />
+        <div class="project-info">
+            <h3 class="project-title">{{project.title}}</h3>
+            <p class="project-description">{{project.description}}</p>
+            <div class="project-links">
+            <a href="{{project.demo_url}}" target="_blank" class="btn">GitHub</a>
+            <a href="{{project.git_hub_url}}" target="_blank" class="btn btn-primary">Live Demo</a>
+            </div>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+    </section>
+    <section id="Contacts">
+        <div class="contact-card">
+            <h1>Let's Connect</h1>
+            <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="cont">
+            <p>Email: <a href="mailto:jumajamin55@gmail.com">jumajamin55@gmail.com</a></p>
+            <p>Phone: <a href="tel:+254742134433">+254 742 134 433</a></p>
+        </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-about">
+        <h3>Juma Jamin</h3>
+        <p>Software Developer & ML Engineer passionate about building impactful projects.</p>
+        </div>
+
+        <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://github.com/juma1-cyber" target="_blank">GitHub</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:jumajamin55@gmail.com">jumajamin55@gmail.com</a></p>
+        <p>Phone: <a href="tel:+254742134433">+254 742 134 433</a></p>
+        <div class="social-icon">
+            <a href="https://github.com/juma1-cyber" target="_blank" aria-label="GitHub">🐱</a>
+            <a href="https://linkedin.com/in/juma-jamin" target="_blank" aria-label="LinkedIn">🔗</a>
+            <a href="https://twitter.com/juma" target="_blank" aria-label="Twitter">🐦</a>
+        </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Juma Jamin. All rights reserved.</p>
+    </div>
+    </footer>
+
+
+
+    <script src="{% static 'myapp/jamin.js' %} "></script>
+
+</body>
+</html>

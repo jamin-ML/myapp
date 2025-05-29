@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumajamin's portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.css">
+    <link rel="stylesheet" href="{% static 'myapp/Skills.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'myapp/me.png' %}" alt="">
+        </div>
+        <ul class="linkscontainer">
+            <li><a href="#">Home</a></li>
+            <li><a href="{% url 'skills' %}">Skills</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+        <div class="icons">
+            <a href="#"><i class="bx bx-search"></i></a>
+            <a href="#"><i class="bx bx-user"></i></a>
+            <div class="bx bx-menu" id="menu-icon"><i></i></div>
+        </div>
+        
+    </header>
+    <section>
+
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            
+        </div>
+    </section>
+
+    <script src="{% static 'myapp/jamin.js' %}"></script>
+    
+</body>
+</html>
